@@ -1,8 +1,8 @@
 // local command "flutter run"
 import 'package:flutter/material.dart';
 // const
-import "const/color.dart";
-import "const/text.dart";
+import 'package:warikan_ultimate/const/color.dart';
+import 'package:warikan_ultimate/const/text.dart';
 // component
 import 'components/tutorial/MyHomePage.dart' show MyHomePage;
 
