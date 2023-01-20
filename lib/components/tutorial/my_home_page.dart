@@ -3,6 +3,8 @@ library my_home_page;
 
 // flutterのパッケージを使用するためにimportする
 import 'package:flutter/material.dart';
+import 'package:warikan_ultimate/components/tutorial/ichiba/practice_ichiba.dart';
+import 'package:warikan_ultimate/components/tutorial/yamada/practice_yamada.dart';
 // const
 import 'package:warikan_ultimate/const/text.dart';
 
@@ -48,10 +50,29 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(tutorialText),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // ボタンを押したときのコード
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PracticeIchiba()),
+                );
+              },
+              child: Text(pageLinkIchiba),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // ボタンを押したときのコード
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PracticeYamada()),
+                );
+              },
+              child: Text(pageLinkYamada),
             ),
           ],
         ),

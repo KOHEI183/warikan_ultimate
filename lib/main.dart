@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:warikan_ultimate/const/color.dart';
 import 'package:warikan_ultimate/const/text.dart';
 // component
-import 'components/tutorial/MyHomePage.dart' show MyHomePage;
+import 'components/tutorial/my_home_page.dart' show MyHomePage;
 
 void main() {
   runApp(const MyApp());
