@@ -4,7 +4,7 @@ library my_home_page;
 // flutterのパッケージを使用するためにimportする
 import 'package:flutter/material.dart';
 // const
-import '../../const/text.dart';
+import 'package:warikan_ultimate/const/text.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
