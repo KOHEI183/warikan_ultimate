@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:warikan_ultimate/components/tutorial/ichiba/form/form.dart';
 // const
 import 'package:warikan_ultimate/const/text.dart';
 import 'package:warikan_ultimate/const/color.dart';
@@ -15,8 +16,17 @@ class PracticeIchiba extends StatelessWidget {
         title: Text(mainPageText),
       ),
       body: Container(
-        color: mainPrimaryColor,
-      ),
+          color: mainPrimaryColor,
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                ChangeForm(),
+                ChangeForm(),
+                ChangeForm(),
+                ChangeForm(),
+              ],
+            ),
+          )),
     );
   }
 }
