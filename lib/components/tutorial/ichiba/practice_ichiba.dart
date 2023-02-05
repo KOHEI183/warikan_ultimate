@@ -28,10 +28,10 @@ class PracticeIchiba extends StatelessWidget {
             // 縦に並べる、行を実現するWidget
             child: Column(
               children: <Widget>[
-                // ChangeForm(),
-                // ChangeForm(),
-                // ChangeForm(),
-                // ChangeForm(),
+                ChangeForm(),
+                ChangeForm(),
+                ChangeForm(),
+                ChangeForm(),
                 const Text("テストテキスト"),
                 TextButton(
                     onPressed: () => {print("ボタンが押された")}, // ボタンが押された時のイベント
