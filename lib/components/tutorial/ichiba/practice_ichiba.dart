@@ -13,8 +13,18 @@ class PracticeIchiba extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(mainPageText),
-      ),
+          title:
+              //列を実現するWidget
+              Row(
+        children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.pink,
+            size: 24.0,
+          ),
+          Text(mainPageText),
+        ],
+      )),
       body: Container(
           color: mainPrimaryColor,
           child: Container(
@@ -54,6 +64,8 @@ class PracticeIchiba extends StatelessWidget {
               ],
             ),
           )),
+      drawer: const Drawer(child: Center(child: Text("左のDrawer"))),
+      endDrawer: const Drawer(child: Center(child: Text("右EndDrawer"))),
     );
   }
 }

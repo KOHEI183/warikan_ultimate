@@ -43,17 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       // appbarの設定
       appBar: AppBar(
-          //列を実現するWidget
-          title: Row(
-        children: [
-          Icon(
-            Icons.favorite,
-            color: Colors.pink,
-            size: 24.0,
-          ),
-          Text(widget.title),
-        ],
-      )),
+        //列を実現するWidget
+        title: Text(widget.title),
+      ),
       // body: ウィジェット（中身）
       body: Center(
         child: Column(
