@@ -43,8 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       // appbarの設定
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
+          //列を実現するWidget
+          title: Row(
+        children: [
+          Icon(
+            Icons.favorite,
+            color: Colors.pink,
+            size: 24.0,
+          ),
+          Text(widget.title),
+        ],
+      )),
       // body: ウィジェット（中身）
       body: Center(
         child: Column(
@@ -79,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       // ウィジェット（下のナビゲーションバー)
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () => {_incrementCounter, print("押したね？")},
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // この末尾のカンマは、ビルドメソッドの自動書式化を円滑にするものです.
