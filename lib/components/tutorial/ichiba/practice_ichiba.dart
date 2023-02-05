@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:warikan_ultimate/components/tutorial/ichiba/form/form.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // const
 import 'package:warikan_ultimate/const/text.dart';
 import 'package:warikan_ultimate/const/color.dart';
@@ -17,11 +18,7 @@ class PracticeIchiba extends StatelessWidget {
               //列を実現するWidget
               Row(
         children: [
-          Icon(
-            Icons.favorite,
-            color: Colors.pink,
-            size: 24.0,
-          ),
+          Icon(FontAwesomeIcons.gift, color: Colors.teal),
           Text(mainPageText),
         ],
       )),
