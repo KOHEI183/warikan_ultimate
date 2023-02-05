@@ -8,6 +8,9 @@ import 'package:warikan_ultimate/components/tutorial/yamada/practice_yamada.dart
 // const
 import 'package:warikan_ultimate/const/text.dart';
 
+// Stateful：動的
+// StatefulWidgetを継承したクラス : MyHomePage
+// Stateを継承したクラス : _MyHomePageState
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   // finalはプログラムを実行して値が代入されたあと変更できない
@@ -18,6 +21,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String _type = "偶数";
   // 変数　Integer型の_counterで初期値は0
   int _counter = 0;
 
@@ -30,6 +34,11 @@ class _MyHomePageState extends State<MyHomePage> {
      */
     setState(() {
       _counter++;
+      if (_counter % 2 == 0) {
+        _type = "偶数";
+      } else {
+        _type = "奇数";
+      }
     });
   }
 
@@ -52,9 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
+              // 変数の表示,変数の更新
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              '$_type',
+              style: TextStyle(fontSize: 20, color: Colors.red),
+            ),
+            // trueのときだけ表示させることができる
+            if (_counter % 2 == 0)
+              Text('偶数です', style: TextStyle(fontSize: 20, color: Colors.red)),
             ElevatedButton(
               onPressed: () {
                 // ボタンを押したときのコード
@@ -80,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       // ウィジェット（下のナビゲーションバー)
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {_incrementCounter, print("押したね？")},
+        onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // この末尾のカンマは、ビルドメソッドの自動書式化を円滑にするものです.

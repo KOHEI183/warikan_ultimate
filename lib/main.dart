@@ -10,6 +10,10 @@ void main() {
   runApp(const MyApp());
 }
 
+// Stateless：静的
+// StatelessWidgetで定義されているもの : title、theme、home
+// あくまでhomeでStatefulWidget（MyHomePage）をimportしているだけ
+// StatelessWidgetではstateは扱えない
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
